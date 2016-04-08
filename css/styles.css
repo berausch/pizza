@@ -5,3 +5,18 @@
 .order-speciality-pizza {
   display:none;
 }
+
+.order-details {
+  display:none;
+}
+
+.order-summary {
+  display:none;
+}
+li:hover {
+  text-decoration: underline;
+}
+li {
+  cursor: pointer;
+  color: #0088cc;
+}

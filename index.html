@@ -11,8 +11,10 @@
   <body>
     <div class="container">
       <h1>Sgt. Pepperoni's Pizza</h1>
-          <h2>Happiness is a warm Pizza</h2>
-          <h3 id="order-link">Order a pizza for Pickup or Delivery</h3>
+      <h2>Happiness is a warm Pizza</h2>
+      <h3 id="order-link">Order a pizza for Pickup or Delivery</h3>
+      <div class="row">
+        <div class="col-lg-9">
           <form id="order">
             <h4 id="order-description1">Pick your Size, Sauce and Toppings</h4>
             <h6 id="order-description2">Every Pizza comes with choice of sauce and 2 complimentary toppings. Additional toppings are $1 each.</h6>
@@ -37,13 +39,17 @@
             <span class="btn btn-primary" id="make-pizza">Make your Own pizza</span>
             </div>
             <div class="make-pizza">
+              <div class="form-group">
+                <label for="pname">Name this Pizza:<span class="description-head"><br>(Helpful when ordering multiple Pizzas)</span> </label>
+                <input type="text" id="pname">
+              </div>
               <div class="size">
                 <h4 id="size-header">Pick your Size:</h4>
                 <select class="form-control" id="size">
-                    <option>Small<span class="menu-price"> - $10</span></option>
-                    <option>Medium<span class="menu-price"> - $13</span></option>
-                    <option>Large<span class="menu-price"> - $15</span></option>
-                    <option>X-Large<span class="menu-price"> - $18</span></option>
+                    <option value="Small">Small<span class="menu-price"> - $10</span></option>
+                    <option value="Medium">Medium<span class="menu-price"> - $13</span></option>
+                    <option value="Large">Large<span class="menu-price"> - $15</span></option>
+                    <option value="X-Large">X-Large<span class="menu-price"> - $18</span></option>
                 </select>
               </div>
               <div class="sauce">
@@ -90,31 +96,40 @@
                   <div class="row">
                     <div class="col-md-10">
                       <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Garlic">Garlic
+                        <input type="checkbox" name="veggie" value="Garlic">
+                        Garlic
                       </label>
                       <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Green peppers">Green peppers
+                        <input type="checkbox" name="veggie" value="Green peppers">
+                        Green peppers
                       </label>
                       <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Jalepenos">Jalepenos
+                        <input type="checkbox" name="veggie" value="Jalepenos">
+                        Jalepenos
                       </label>
                       <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Mushrooms">Mushrooms
+                        <input type="checkbox" name="veggie" value="Mushrooms">
+                        Mushrooms
                       </label>
                       <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Onions">Onions
+                        <input type="checkbox" name="veggie" value="Onions">
+                        Onions
                       </label>
                       <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Olives">Olives
+                        <input type="checkbox" name="veggie" value="Olives">
+                        Olives
                       </label>
                       <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Red onions">Red onions
+                        <input type="checkbox" name="veggie" value="Red onions">
+                        Red onions
                       </label>
                       <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Red pepper">Red peppers
+                        <input type="checkbox" name="veggie" value="Red pepper">
+                        Red peppers
                       </label>
                       <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Sun dried tomatoes">Sun dried tomatoes
+                        <input type="checkbox" name="veggie" value="Sun dried tomatoes">
+                        Sun dried tomatoes
                       </label>
                       <label>
                     </div>
@@ -124,32 +139,47 @@
               <div class="other-toppings">
                 <h4 id="other-toppings-header">Pick your Other Toppings:</h4>
                 <div class="checkbox">
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="extra" value="Pineapple">
-                        Pineapple
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="extra" value="Goat Cheese">
-                        Goat Cheese
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="extra" value="Extra Sauce">
-                        Extra Sauce
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="extra" value="Extra Cheese">
-                        Extra Cheese
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="extra" value="Extra Toppings">
-                        Extra Toppings
-                      </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="extra" value="Pineapple">
+                    Pineapple
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="extra" value="Goat Cheese">
+                    Goat Cheese
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="extra" value="Extra Sauce">
+                    Extra Sauce
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="extra" value="Extra Cheese">
+                    Extra Cheese
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="extra" value="Extra Toppings">
+                    Extra Toppings
+                  </label>
                 </div>
               </div>
             </div>
             <span class="btn btn-primary" id="add-pizza">Add another Pizza</span>
             <button type="submit" class="btn">Submit</button>
           </form>
+        </div>
+        <div class="col-lg-3">
+          <div class="order-summary">
+            <h3>Current Order</h3>
+              <ul id="pizza-order">
+              </ul>
+          </div>
+          <div class="order-details">
+            <h3><span id="pizza-name"></span>Details</h3>
+              <h6>Size:<span id="order-size"></span></h6>
+              <h6>Sauce:<span id="order-sauce"></span></h6>
+              <h6>Toppings:<span id="order-toppings"></span></h6>
+          </div>
+        </div>
       </div>
+    </div>
   </body>
 </html>
