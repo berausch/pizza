@@ -2,7 +2,7 @@
   padding-left: 40px;
 }
 
-.order-speciality-pizza {
+.order-specialty-pizza {
   display:none;
 }
 
@@ -10,9 +10,31 @@
   display:none;
 }
 
+.make-pizza {
+  display:none;
+}
+
 .order-summary {
   display:none;
 }
+.show-specialty {
+  cursor: pointer;
+  color: red;
+}
+
+.show-specialty:hover {
+  text-decoration: underline
+}
+
+.show-make {
+  cursor: pointer;
+  color: #0088cc
+}
+
+.show-make:hover {
+  text-decoration: underline
+}
+
 li:hover {
   text-decoration: underline;
 }

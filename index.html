@@ -14,30 +14,11 @@
       <h2>Happiness is a warm Pizza</h2>
       <h3 id="order-link">Order a pizza for Pickup or Delivery</h3>
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-8">
           <form id="order">
             <h4 id="order-description1">Pick your Size, Sauce and Toppings</h4>
-            <h6 id="order-description2">Every Pizza comes with choice of sauce and 2 complimentary toppings. Additional toppings are $1 each.</h6>
-            <div class="order-speciality-pizza">
-              <label for="size-special">What Size would you like?</label>
-              <select class="form-control" id="size-special">
-                  <option>Small<span class="menu-price"> - $10</span></option>
-                  <option>Medium<span class="menu-price"> - $13</span></option>
-                  <option>Large<span class="menu-price"> - $15</span></option>
-                  <option>X-Large<span class="menu-price"> - $18</span></option>
-              </select>
-              <label for="special-pizzas">Come together over our speciality Pizzas</label>
-              <select class="form-control" id="special-pizzas">
-                  <option>Piggies<span class="description"><br>All the meat we have to offer on one pizza!</span></option>
-                  <option>Savoy Truffle<span class="description"><br>Garlic truffle sauce, mozzerella and goat cheese, topped with sliced pears and ham.</span></option>
-                  <option>Honey Pie<span class="description"><br>A Classic Hawaiian Pizza with Canadian Bacon and Pineapple.</span></option>
-                  <option>Sgt. Pepper's Lonely Heart Club BBQ<br>BBQ sauce, mozzerella, BBQ Chicken, onions, and pepperoncini peppers.</span></option>
-                  <option>Wild Honey Pie<span class="description"><br>A Classic Hawaiian Pizza with a Wild twist, with Canadian Bacon, Pineapple, jalepenos, and an extra spicy tomato sauce.</span></option>
-              </select>
-              <span class="btn btn-primary" id="add-specialty">Add a Specialty Pizza</span>
-
-            <span class="btn btn-primary" id="make-pizza">Make your Own pizza</span>
-            </div>
+            <h4 id="order-description2">Every Pizza comes with choice of sauce and 2 complimentary toppings. Additional toppings are $1 each.</h4>
+            <h3 class="show-make">Make your Own Pizza for Pickup or Delivery</h3>
             <div class="make-pizza">
               <div class="form-group">
                 <label for="pname">Name this Pizza:<span class="description-head"><br>(Helpful when ordering multiple Pizzas)</span> </label>
@@ -55,17 +36,15 @@
               <div class="sauce">
                 <h4 id="size-header">Pick your Sauce:</h4>
                 <select class="form-control" id="sauce">
-                    <option>Tomatoe Sauce</option>
-                    <option>Spicy Tomatoe Sauce</option>
-                    <option>Garlic truffle sauce</option>
+                    <option>Tomato Sauce</option>
+                    <option>Spicy Tomato Sauce</option>
+                    <option>Garlic Truffle Sauce</option>
                     <option>BBQ Sauce</option>
                 </select>
               </div>
               <div class="meat-toppings">
                 <h4 id="meat-toppings-header">Pick your Piggy Toppings:</h4>
                 <div class="checkbox">
-                  <div class="row">
-                    <div class="col-md-10">
                       <label class="checkbox-item">
                         <input type="checkbox" name="meat" value="Pepperoni">
                         Pepperoni
@@ -86,56 +65,50 @@
                         <input type="checkbox" name="meat" value="Chicken">
                         Chicken
                       </label>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div class="veggie-toppings">
                 <h4 id="veggie-toppings-header">Pick your Veggie Toppings:</h4>
                 <div class="checkbox">
-                  <div class="row">
-                    <div class="col-md-10">
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Garlic">
-                        Garlic
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Green peppers">
-                        Green peppers
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Jalepenos">
-                        Jalepenos
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Mushrooms">
-                        Mushrooms
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Onions">
-                        Onions
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Olives">
-                        Olives
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Red onions">
-                        Red onions
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Red pepper">
-                        Red peppers
-                      </label>
-                      <label class="checkbox-item">
-                        <input type="checkbox" name="veggie" value="Sun dried tomatoes">
-                        Sun dried tomatoes
-                      </label>
-                      <label>
-                    </div>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="veggie" value="Garlic">
+                    Garlic
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="veggie" value="Green peppers">
+                    Green peppers
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="veggie" value="Jalepenos">
+                    Jalepenos
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="veggie" value="Mushrooms">
+                    Mushrooms
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="veggie" value="Onions">
+                    Onions
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="veggie" value="Olives">
+                    Olives
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="veggie" value="Red onions">
+                    Red onions
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="veggie" value="Red pepper">
+                    Red peppers
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="veggie" value="Sun dried tomatoes">
+                    Sun dried tomatoes
+                  </label>
+                  <label>
                   </div>
                 </div>
-              </div>
               <div class="other-toppings">
                 <h4 id="other-toppings-header">Pick your Other Toppings:</h4>
                 <div class="checkbox">
@@ -162,21 +135,23 @@
                 </div>
               </div>
             </div>
-            <span class="btn btn-primary" id="add-pizza">Add another Pizza</span>
-            <button type="submit" class="btn">Submit</button>
+
+            <button type="submit" class="btn">Submit this Pizza</button>
           </form>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-4">
           <div class="order-summary">
             <h3>Current Order</h3>
               <ul id="pizza-order">
               </ul>
+              <h3>Current Order Total:<span id="entire-order-total"></span> </h3>
           </div>
           <div class="order-details">
-            <h3><span id="pizza-name"></span>Details</h3>
-              <h6>Size:<span id="order-size"></span></h6>
-              <h6>Sauce:<span id="order-sauce"></span></h6>
-              <h6>Toppings:<span id="order-toppings"></span></h6>
+            <h4><span id="pizza-name"></span> Details</h3>
+              <h5>Size:<span id="order-size"></span></h6>
+              <h5>Sauce:<span id="order-sauce"></span></h6>
+              <h5>Toppings:<span id="order-toppings"></span></h6>
+              <span class="btn btn-primary" id="add-pizza">Checkout</span>
           </div>
         </div>
       </div>

@@ -7,6 +7,15 @@
   color: #0088cc;
 }
 
+.show-specialty {
+  cursor: pointer;
+  color: #0088cc
+}
+
+.show-specialty:hover {
+  text-decoration: underline
+}
+
 .contact:hover {
   text-decoration: underline;
 }

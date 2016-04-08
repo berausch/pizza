@@ -41,10 +41,25 @@ Pizza.prototype.namePizza = function(){
     return newPizza.name
   }
 }
+var total = 0;
+Pizza.prototype.orderTotal = function(){
+return total += newPizza.price();
+}
+
+Pizza.prototype.allToppings = function(){
+  return newPizza.meats.join(", ") + newPizza.veggies.join(", ") + newPizza.extras.join(", ");
+}
 
 $(document).ready(function() {
+
+  $(".show-make").click(function(){
+    $(".make-pizza").toggle();
+  });
+
+
   $("form#order").submit(function(event) {
       event.preventDefault();
+      $("button").text("Add Another Pizza");
 
       var size = $("#size").val();
       var sauce = $("#sauce").val();
@@ -67,16 +82,19 @@ $(document).ready(function() {
       newPizza = new Pizza(pizzaName, size, sauce, meatToppings, veggieToppings, extraToppings);
       newPrice = newPizza.price();
       var pizzaTitle = newPizza.namePizza();
-
+      newTotal = newPizza.orderTotal();
 
       $(".order-summary").show();
       $("#pizza-order").append("<li class='pizza-order-head'>" + pizzaTitle + " - $" + newPrice);
+      $("#entire-order-total").empty().append(" $" + newTotal);
 
       $(".pizza-order-head").last().click(function(){
         $(".order-details").show();
-
-
-      })
-
+        $("#pizza-name").text(pizzaTitle);
+        $("#order-size").text(newPizza.size);
+        $("#order-sauce").text(newPizza.size);
+        $("#order-sauce").text(newPizza.allToppings());
+      });
+      $("#pname").val("");
     });
 });
