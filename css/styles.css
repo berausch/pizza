@@ -1,0 +1,7 @@
+.radio label, .checkbox label {
+  padding-left: 40px;
+}
+
+.order-speciality-pizza {
+  display:none;
+}
