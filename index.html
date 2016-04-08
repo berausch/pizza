@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.2.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Sgt. Pepperoni's Pizza</title>
+</head>
+  <body>
+    <div class="container">
+      <h1>Sgt. Pepperoni's Pizza</h1>
+          <h2>Happiness is a warm Pizza</h2>
+          <h3 id="order-link">Order a pizza for Pickup or Delivery</h3>
+          <form id="order">
+            <h4 id="order-link">Pick your Size, Sauce and Toppings</h4>
+            <h6 id="order-link">Every Pizza comes with choice of sauce and 2 complimentary toppings. Additional toppings are $1 each.</h6>
+            <label for="size">What Size would you like?</label>
+            <select class="form-control" id="size">
+                <option>Small<span class="menu-price"> - $10</span></option>
+                <option>Medium<span class="menu-price"> - $13</span></option>
+                <option>Large<span class="menu-price"> - $15</span></option>
+                <option>X-Large<span class="menu-price"> - $18</span></option>
+            </select>
+            <label for="special-pizzas">Come together over our speciality Pizzas</label>
+            <select class="form-control" id="special-pizzas">
+                <option>Piggies<span class="description"><br>All the meat we have to offer on one pizza!</span></option>
+                <option>Savoy Truffle<span class="description"><br>Garlic truffle sauce, mozzerella and goat cheese, topped with sliced pears and ham.</span></option>
+                <option>Honey Pie<span class="description"><br>A Classic Hawaiian Pizza with Canadian Bacon and Pineapple.</span></option>
+                <option>Sgt. Pepper's Lonely Heart Club BBQ<br>BBQ sauce, mozzerella, BBQ Chicken, onions, and pepperoncini peppers.</span></option>
+                <option>Wild Honey Pie<span class="description"><br>A Classic Hawaiian Pizza with a Wild twist, with Canadian Bacon, Pineapple, jalepenos, and an extra spicy tomato sauce.</span></option>
+            </select>
+            <span class="btn btn-primary" id="add-specialty">Add a Specialty Pizza</span>
+            <span class="btn btn-primary" id="make-pizza">Make your Own pizza</span>
+            <select class="form-control" id="size">
+                <option>Small<span class="menu-price"> - $10</span></option>
+                <option>Medium<span class="menu-price"> - $13</span></option>
+                <option>Large<span class="menu-price"> - $15</span></option>
+                <option>X-Large<span class="menu-price"> - $18</span></option>
+            </select>
+            <label for="sauces">Choose a Sauce</label>
+            <select class="form-control" id="sauces">
+                <option>Tomatoe Sauce</option>
+                <option>Spicy Tomato sauce</option>
+                <option>Garlic truffle sauce</option>
+                <option>BBQ Sauce</option>
+            </select>
+            <label for="meat-toppings">Meat Toppings</label>
+            <select multiple class="form-control" id="meat-toppings">
+              <option>Pepperoni</option>
+              <option>Ham</option>
+              <option>Sausage</option>
+              <option>Bacon</option>
+              <option>Chicken</option>
+            </select>
+            <label for="veggie-toppings">Veggie Toppings</label>
+            <select multiple class="form-control" id="veggie-toppings">
+              <option>Garlic</option>
+              <option>Green peppers</option>
+              <option>Jalepenos</option>
+              <option>Mushrooms</option>
+              <option>Onions</option>
+              <option>Olives</option>
+              <option>Red onions</option>
+              <option>Red peppers</option>
+              <option>Sun dried tomatoes</option>
+            </select>
+            <label for="other-toppings">Other Toppings</label>
+            <select multiple class="form-control" id="other-toppings">
+                <option>Pineapple</option>
+                <option>Goat Cheese</option>
+                <option></option>
+                <option>Mushrooms</option>
+                <option>Onions</option>
+                <option>Olives</option>
+                <option>Red onions</option>
+                <option>Red peppers</option>
+                <option>Sun dried tomatoes</option>
+            </select>
+            <label for="extras">Extras</label>
+            <select multiple class="form-control" id="extras">
+                <option>Extra Sauce</option>
+                <option>Extra Cheese</option>
+                <option>Extra Toppings</option>
+            </select>
+            <span class="btn btn-primary" id="add-pizza">Add another Pizza</span>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+      </div>
+  </body>
+</html>
