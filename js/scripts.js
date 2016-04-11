@@ -14,40 +14,40 @@ return total;
 
 
 Pizza.prototype.sizePrice = function() {
-if(newPizza.size === "Small"){
+if(this.size === "Small"){
   return 10;
-} else if(newPizza.size === "Medium"){
+} else if(this.size === "Medium"){
   return 13;
-} else if(newPizza.size === "Large"){
+} else if(this.size === "Large"){
   return 15;
-} else if(newPizza.size === "X-Large"){
+} else if(this.size === "X-Large"){
   return 18;
 }};
 
 Pizza.prototype.price = function() {
   var totalToppings = 0
   console.log(totalToppings);
-  console.log(newPizza.toppings()-2);
-  if(newPizza.toppings()>2){
-    totalToppings = (newPizza.toppings()-2);
+  console.log(this.toppings()-2);
+  if(this.toppings()>2){
+    totalToppings = (this.toppings()-2);
     }
-  return (newPizza.sizePrice() + totalToppings);
+  return (this.sizePrice() + totalToppings);
 };
 
 Pizza.prototype.namePizza = function(){
-  if(newPizza.name === ""){
-    return "Pizza - " + newPizza.size;
+  if(this.name === ""){
+    return "Pizza - " + this.size;
   } else {
-    return newPizza.name
+    return this.name
   }
 }
 var total = 0;
 Pizza.prototype.orderTotal = function(){
-return total += newPizza.price();
+return total += this.price();
 }
 
 Pizza.prototype.allToppings = function(){
-  return newPizza.meats.join(", ") + newPizza.veggies.join(", ") + newPizza.extras.join(", ");
+  return this.meats.join(", ") + this.veggies.join(", ") + this.extras.join(", ");
 }
 
 $(document).ready(function() {
@@ -79,7 +79,7 @@ $(document).ready(function() {
         extraToppings.push($(this).val());
       });
 
-      newPizza = new Pizza(pizzaName, size, sauce, meatToppings, veggieToppings, extraToppings);
+      var newPizza = new Pizza(pizzaName, size, sauce, meatToppings, veggieToppings, extraToppings);
       newPrice = newPizza.price();
       var pizzaTitle = newPizza.namePizza();
       newTotal = newPizza.orderTotal();
@@ -92,8 +92,8 @@ $(document).ready(function() {
         $(".order-details").show();
         $("#pizza-name").text(pizzaTitle);
         $("#order-size").text(newPizza.size);
-        $("#order-sauce").text(newPizza.size);
-        $("#order-sauce").text(newPizza.allToppings());
+        $("#order-sauce").text(newPizza.sauce);
+        $("#order-toppings").text(newPizza.allToppings());
       });
       $("#pname").val("");
     });
